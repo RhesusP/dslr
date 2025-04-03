@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import math
-from describe import describe, load
+from describe import load
 
 def second_plot(df: pd.DataFrame):
     ravenclaw = df[df["Hogwarts House"].str.lower() == "ravenclaw"]
@@ -57,7 +57,7 @@ def first_plot(df: pd.DataFrame):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: describe.py <path>")
+        print("Usage: histogram.py <path>")
         sys.exit(1)
     df = load(sys.argv[1])
     if df is None:
