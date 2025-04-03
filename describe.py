@@ -85,9 +85,11 @@ def main():
         print("Usage: describe.py <path>")
         sys.exit(1)
     df = load(sys.argv[1])
+    if df is None:
+        print("No data found")
+        sys.exit(1)
     result = describe(df)
     print(result)
-    # for col, values in df.items():
     return
 
 
