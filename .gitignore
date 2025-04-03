@@ -5,3 +5,5 @@
 
 # subject
 *.subject.pdf
+.venv/
+__pycache__
