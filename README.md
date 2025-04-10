@@ -87,7 +87,7 @@ probability
 
 ### How does it work?
 
-#### 1. The model computes a **linear combination of the features**:
+#### 1. The model computes a linear combination of the features:
 
 $$
 z = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + ... + \theta_n x_n
@@ -97,16 +97,19 @@ where:
 
 - $\theta_0$ is the intercept (bias term)
 - $\theta$ are the weights (parameters) of the model
-- $x$ are the features.
+- $x$ are the features
 
-#### 2. The output of the linear combination is passed through the **sigmoid function** to obtain a probability:
+#### 2. Applying the sigmoid function
+
+The output of the linear combination is passed through the **sigmoid function** to obtain a probability:
 
 $$
 h_\theta(x) = \sigma(z) = \frac{1}{1 + e^{-z}}
 $$
 
-#### 3. The model uses a cost function called the **cross-entropy cost function** to measure the difference between the
+#### 3. Compute the cost
 
+The model uses a cost function called the **cross-entropy cost function** to measure the difference between the
 predicted probabilities and the actual labels. The cost function is defined as:
 
 $$
@@ -117,7 +120,7 @@ where:
 
 - $m$ is the number of training examples
 - $y^{(i)}$ is the actual label for the $i$-th training example
-- $h_\theta(x^{(i)})$ is the predicted probability for the $i$-th training example.
+- $h_\theta(x^{(i)})$ is the predicted probability for the $i$-th training example
 
 Like linear regression, logistic regression computes weights for each feature, compute a cost try to minimize that cost.
 The cost function is defined as:
@@ -126,9 +129,9 @@ $$
 J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} \log(h_\theta(x^{(i)})) + (1 - y^{(i)}) \log(1 - h_\theta(x^{(i)})) \right]
 $$
 
-#### 4. Optimization with the **Gradient Descent
+#### 4. Optimization with Gradient Descent
 
-** algorithm is used to find the best weights that minimize the cost function
+**Gradient Descent** algorithm is used to find the best weights that minimize the cost function.
 
 ### One vs All
 
