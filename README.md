@@ -77,9 +77,11 @@ logistic regression estimates the probability that an input belongs to a particu
 0 and 1, which can be interpreted as a probability.
 
 At the heart of logistic regression is the sigmoid function, defined as:
+
 $$
 \sigma(x) = \frac{1}{1 + e^{-x}}
 $$
+
 This function takes any real number and maps it to a value between 0 and 1. The output can be interpreted as a
 probability
 
@@ -90,6 +92,7 @@ probability
 $$
 z = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + ... + \theta_n x_n
 $$
+
 where:
 
 - $\theta_0$ is the intercept (bias term)
@@ -105,9 +108,11 @@ $$
 #### 3. The model uses a cost function called the **cross-entropy cost function** to measure the difference between the
 
 predicted probabilities and the actual labels. The cost function is defined as:
+
 $$
 J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} \log(h_\theta(x^{(i)})) + (1 - y^{(i)}) \log(1 - h_\theta(x^{(i)})) \right]
 $$
+
 where:
 
 - $m$ is the number of training examples
@@ -116,6 +121,7 @@ where:
 
 Like linear regression, logistic regression computes weights for each feature, compute a cost try to minimize that cost.
 The cost function is defined as:
+
 $$
 J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} \log(h_\theta(x^{(i)})) + (1 - y^{(i)}) \log(1 - h_\theta(x^{(i)})) \right]
 $$
@@ -127,8 +133,7 @@ $$
 ### One vs All
 
 In this case, we have multiple classes (4 Hogwarts houses). We can use the one-vs-all approach to train a separate
-logistic
-regression model for each class.
+logistic regression model for each class.
 
 1. First, we train one logistic regression model for each class. For a given house, say Gryffindor, the corresponding
    classifier is trained to distinguish between Gryffindor (labeled as 1) and all other houses (labeled as 0).
