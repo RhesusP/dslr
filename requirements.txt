@@ -1,2 +1,6 @@
 matplotlib
 numpy
+pandas
+flake8
+scikit-learn
+

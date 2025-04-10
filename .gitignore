@@ -7,3 +7,6 @@
 *.subject.pdf
 .venv/
 __pycache__
+
+.weights.csv
+houses.csv
