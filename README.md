@@ -64,6 +64,10 @@ python3 logreg_predict.py datasets/dataset_test.csv
 
 ### 1. **Which Hogwarts course has a homogeneous score distribution between all four houses?**
 
+The course with a homogeneous score distribution between all four houses is **Care of Magical Creatures**. The
+distribution of scores for this course is similar for all four houses. This indicates that students from different
+houses perform similarly in this subject (so this course is not a good predictor of the house).
+
 ### 2. **What are the two features that are similar ?**
 
 ### 3. **From this visualization, what features are you going to use for your logistic regression?**

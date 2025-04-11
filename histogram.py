@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import math
 from describe import load
 
+
 def second_plot(df: pd.DataFrame):
     ravenclaw = df[df["Hogwarts House"].str.lower() == "ravenclaw"]
     gryffindor = df[df["Hogwarts House"].str.lower() == "gryffindor"]
@@ -55,6 +56,7 @@ def first_plot(df: pd.DataFrame):
     plt.tight_layout(pad=10.0, w_pad=6.0, h_pad=4.0)
     plt.show()
 
+
 def main():
     if len(sys.argv) < 2:
         print("Usage: histogram.py <path>")
@@ -63,13 +65,17 @@ def main():
     if df is None:
         print("No data found")
         sys.exit(1)
-
-    first_plot(df)
-    second_plot(df)
-
-    return
-
+    try:
+        first_plot(df)
+        second_plot(df)
+    except Exception as e:
+        print(f"{type(e).__name__}: {str(e)}. Maybe you're using the test dataset?")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
     main()
+
+# The course with a homogeneous score distribution between all four houses is Care of Magical Creatures. The
+# distribution of scores for this course is similar for all four houses. This indicates that students from different
+# houses perform similarly in this subject (so this course is not a good predictor of the house).
