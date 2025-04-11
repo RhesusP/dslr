@@ -32,6 +32,7 @@ various disciplines and their corresponding Hogwarts houses.
 * [pandas](https://pandas.pydata.org/docs/getting_started/install.html)
 * [matplotlib](https://matplotlib.org/stable/install/index.html)
 * [scikit-learn](https://scikit-learn.org/stable/install.html)
+* [seaborn](https://seaborn.pydata.org/installing.html)
 
 ## Installation
 
@@ -68,7 +69,23 @@ The course with a homogeneous score distribution between all four houses is **Ca
 distribution of scores for this course is similar for all four houses. This indicates that students from different
 houses perform similarly in this subject (so this course is not a good predictor of the house).
 
+![Care of Magical Creatures histogram](images/histogram.png)
+
 ### 2. **What are the two features that are similar ?**
+
+The two features that are similar are **Astronomy** and **Defense Against the Dark Arts**. This can be observed in the
+following scatter plot which shows the scores of students in these two subjects. We can observe a pretty diagonal line
+indicating a strong negative correlation between the two features.
+
+![Astronomy vs Defense Against the Dark Arts](images/scatter_plot.png)
+
+This observation is confirmed when we print the correlation matrix of the dataset. We can see that the correlation
+between these two features is near -1.
+
+![Correlation matrix](images/correlation_matrix.png)
+
+If we look at the values of these two features, we can see that there is a factor of -100 between the two features,
+explaining the strong negative correlation.
 
 ### 3. **From this visualization, what features are you going to use for your logistic regression?**
 
