@@ -189,7 +189,7 @@ def train_one_vs_all(X: np.ndarray, y: np.ndarray, nb_labels: int,
         cost_history = fit(X, y_binary, theta, learning_rate, nb_iters)
         all_theta[c] = theta
         cost_histories[c] = cost_history
-        print(f"Entraînement terminé pour la classe {c} (coût final = {cost_history[-1]:.4f})")
+        print(f"Training completed for class {c} (final cost = {cost_history[-1]:.4f})")
     return all_theta, cost_histories
 
 
@@ -224,7 +224,6 @@ def main():
     acc_train = accuracy_score(y_train, pred_train)
     acc_val = accuracy_score(y_val, pred_val)
     print(f"Training Accuracy: {acc_train * 100:.2f}%")
-    print(f"Validation Accuracy: {acc_val * 100:.2f}%")
 
     # Save weights in a csv file
     try:

@@ -94,7 +94,6 @@ def get_nulls(col: pd.Series) -> int:
 
 def describe(df: pd.DataFrame) -> pd.DataFrame:
     numeric_cols = df.select_dtypes(include=[np.number]).columns
-    print(f"Numeric columns: {numeric_cols}")
     stats = {}
 
     for col in numeric_cols:
@@ -112,7 +111,6 @@ def describe(df: pd.DataFrame) -> pd.DataFrame:
             "Max": getmax(values),
             "Nulls": get_nulls(df[col])
         }
-        print(f"Stats for {col}: {stats[col]}")
     return pd.DataFrame(stats)
 
 

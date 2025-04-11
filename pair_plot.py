@@ -37,7 +37,6 @@ def get_args() -> tuple:
     if not os.path.isfile(path):
         print(f"Error: {path} is not a file.")
         sys.exit(1)
-    print(f"Loading testing data from '{path}'...")
     if not path.endswith(".csv"):
         print(f"Error: {path} is not a csv file.")
         sys.exit(1)
