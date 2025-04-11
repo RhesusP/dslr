@@ -55,7 +55,7 @@ def get_args() -> tuple:
 
 def keep_pertinent_columns(df: pd.DataFrame) -> tuple:
     """
-    Keep only the pertinent columns of the DataFrame and drop the useless ones
+    Keep only the pertinent columns of the DataFrame
 
     :param df: pandas DataFrame
     :return: tuple of (X features and y target)
@@ -63,8 +63,9 @@ def keep_pertinent_columns(df: pd.DataFrame) -> tuple:
     target = "Hogwarts House"
     y = df[target]
     df = df.drop(columns=[target])
-    useless_cols = ["First Name", "Last Name", "Birthday", "Best Hand"]
-    return df.drop(columns=useless_cols), y
+    useful_cols = ["Astronomy", "Herbology", "Divination", "Ancient Runes", "Muggle Studies", "History of Magic",
+                   "Transfiguration", "Charms"]
+    return df[useful_cols], y
 
 
 def standardize(df: pd.DataFrame) -> pd.DataFrame:
