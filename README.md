@@ -89,6 +89,21 @@ explaining the strong negative correlation.
 
 ### 3. **From this visualization, what features are you going to use for your logistic regression?**
 
+The features that are going to be used for the logistic regression are:
+
+- Astronomy
+- Herbology
+- Divination
+- Ancient Runes
+- Muggle Studies
+- History of Magic
+- Transfiguration
+- Charms
+
+Thanks to the pair plot, we can see that these features are well separated between the four houses.
+
+![Pair plot](images/pair_plot.png)
+
 ## Logistic regression _one vs all_
 
 ### What is Logistic Regression?
